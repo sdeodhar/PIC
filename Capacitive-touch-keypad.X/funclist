@@ -1,0 +1,13 @@
+___awdiv: CODE, 1603 0 109
+i1_setscanchannel: CODE, 1895 0 86
+___awmod: CODE, 1712 0 97
+_capsensinit: CODE, 1981 0 52
+_main: CODE, 377 0 1009
+_usartinit: CODE, 3981 0 18
+_USARTWriteString: CODE, 3999 0 27
+_USARTWriteInt: CODE, 1386 0 217
+_isr: CODE, 4 0 370
+_I2Cinit: CODE, 4026 0 33
+_USARTWriteChar: CODE, 2033 0 14
+_setscanchannel: CODE, 1809 0 86
+Total: 2118

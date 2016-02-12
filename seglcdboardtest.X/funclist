@@ -1,0 +1,10 @@
+___awdiv: CODE, 1734 0 109
+___awmod: CODE, 1843 0 97
+_capsensinit: CODE, 1995 0 52
+_main: CODE, 660 0 713
+_usartinit: CODE, 4078 0 18
+_USARTWriteInt: CODE, 1373 0 217
+_isr: CODE, 4 0 653
+_scanchannel: CODE, 1590 0 144
+_USARTWriteChar: CODE, 4064 0 14
+Total: 2017

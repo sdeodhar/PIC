@@ -1,0 +1,861 @@
+HI-TECH Software C Compiler 
+
+Linker command line:
+
+--edf=C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\dat\en_msgs.txt \
+  -cs -h+dist/default/production\pid_code.X.production.sym -z -Q18F4620 \
+  -ol.obj -Mdist/default/production/pid_code.X.production.map -E1 \
+  -ACODE=00h-0FFFFh -ACONST=00h-0FFFFh -ASMALLCONST=01000h-010FFhx240 \
+  -AMEDIUMCONST=01000h-0FFFFh -ARAM=00h-0FFhx15,0F00h-0F7Fh \
+  -ABIGRAM=00h-0F7Fh -ACOMRAM=00h-07Fh -AABS1=00h-0F7Fh -ABANK0=00h-0FFh \
+  -ABANK1=0100h-01FFh -ABANK2=0200h-02FFh -ABANK3=0300h-03FFh \
+  -ABANK4=0400h-04FFh -ABANK5=0500h-05FFh -ABANK6=0600h-06FFh \
+  -ABANK7=0700h-07FFh -ABANK8=0800h-08FFh -ABANK9=0900h-09FFh \
+  -ABANK10=0A00h-0AFFh -ABANK11=0B00h-0BFFh -ABANK12=0C00h-0CFFh \
+  -ABANK13=0D00h-0DFFh -ABANK14=0E00h-0EFFh -ABANK15=0F00h-0F7Fh \
+  -ANVRAM=0F00h-0F7Fh \
+  -preset_vec=00h,intcode=08h,intcodelo,powerup,init,end_init \
+  -pramtop=01000h -psmallconst=SMALLCONST -pmediumconst=MEDIUMCONST \
+  -pconst=CONST -pparam2=BANK2 -AFARRAM=00h-00h -ACONFIG=0300000h-030000Dh \
+  -pconfig=CONFIG -AIDLOC=0200000h-0200007h -pidloc=IDLOC \
+  -AEEDATA=0F00000h-0F003FFh -peeprom_data=EEDATA \
+  -prdata=COMRAM,nvrram=COMRAM,nvbit=COMRAM,rbss=COMRAM,rbit=COMRAM \
+  -pfarbss=FARRAM,fardata=FARRAM \
+  -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
+  -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE \
+  C:\Users\Admin\AppData\Local\Temp\s5gs.obj \
+  dist/default/production\pid_code.X.production.obj 
+
+Object code version is 3.10
+
+Machine type is 18F4620
+
+Call graph: (short form)
+
+*_main size 0,10 offset 0
+     _lcd_init size 0,1 offset 10
+         _DelayMs size 2,5 offset 27
+         _lcd_command size 1,1 offset 25
+             _DelayMs size 2,5 offset 27
+     _adc_init size 0,1 offset 10
+         _DelayMs size 2,5 offset 27
+     _timer0_init size 0,1 offset 10
+     _cal_pid_parameters size 0,0 offset 10
+     _Display size 3,4 offset 18
+         _DelayMs size 2,5 offset 27
+         _lcd_command size 1,1 offset 25
+         _lcd_data size 1,1 offset 25
+             _DelayMs size 2,5 offset 27
+     _DelayMs size 2,5 offset 27
+     _waitkey size 2,2 offset 10
+     _Navigate size 4,12 offset 10
+         ___wmul size 4,2 offset 46
+         ___awmod size 4,3 offset 26
+         ___awdiv size 4,5 offset 26
+     _choose_tcouple size 0,0 offset 10
+*    ___fttol size 4,6 offset 19
+*        ___ftunpack size 4,4 offset 64
+     _dispnum size 3,5 offset 10
+         ___awmod size 4,3 offset 26
+         ___awdiv size 4,5 offset 26
+         _Display size 3,4 offset 18
+     ___awtoft size 3,4 offset 10
+         ___ftpack size 3,3 offset 64
+         ___ftneg size 3,0 offset 17
+     _getkey size 2,2 offset 10
+     _read_adc size 2,0 offset 10
+         _DelayMs size 2,5 offset 27
+*    _currenttemp size 3,3 offset 10
+*        ___ftmul size 6,7 offset 46
+*            ___ftunpack size 4,4 offset 64
+             ___ftpack size 3,3 offset 64
+*        ___ftdiv size 6,8 offset 46
+*            ___ftunpack size 4,4 offset 64
+             ___ftpack size 3,3 offset 64
+*        _actual size 5,25 offset 16
+             ___wmul size 4,2 offset 46
+             ___ftge size 6,3 offset 46
+*            ___ftsub size 6,0 offset 46
+*                ___ftadd size 6,6 offset 52
+*                    ___ftunpack size 4,4 offset 64
+                     ___ftpack size 3,3 offset 64
+*            ___ftdiv size 6,8 offset 46
+*            ___ftmul size 6,7 offset 46
+*            ___ftadd size 6,6 offset 52
+*    _pid size 0,9 offset 10
+         _pid_error size 0,0 offset 19
+             _calc_err size 3,3 offset 19
+                 ___ftsub size 6,0 offset 46
+*        ___ftmul size 6,7 offset 46
+*        ___ftadd size 6,6 offset 52
+         ___ftge size 6,3 offset 46
+*        ___fttol size 4,6 offset 19
+
+Estimated maximum call depth: 5
+
+*intlevel2 size 0,0 offset 72
+*    _timer0_isr size 0,14 offset 72
+*        ___asftadd size 5,0 offset 86
+*            i2___ftadd size 6,6 offset 91
+*                i2___ftunpack size 4,4 offset 103
+                 i2___ftpack size 3,3 offset 103
+
+Estimated maximum call depth: 4
+
+
+                Name          Link     Load   Length Selector Space Scale
+C:\Users\Admin\AppData\Local\Temp\s5gs.obj
+                end_init        38       38       24       4     0
+                init            18       18       20       4     0
+                config      300000   300000        E  300000     0
+                reset_vec        0        0        4       0     0
+dist/default/production\pid_code.X.production.obj
+                intcode          8        8       10       4     0
+                idata         1068     1068      192     834     0
+                smallcons     1000     1000       68     800     0
+                text29        42D6     42D6       46     834     0
+                text28        404C     404C       A2     834     0
+                text30        1EBC     1EBC      3A2     834     0
+                text32        313E     313E      16A     834     0
+                text31        3ED8     3ED8       BA     834     0
+                text27        435A     435A       3A     834     0
+                text23        3B5A     3B5A       EE     834     0
+                text22        36C0     36C0      154     834     0
+                text24        279C     279C      1DE     834     0
+                text26        356C     356C      154     834     0
+                text25        4178     4178       74     834     0
+                text37        3F92     3F92       BA     834     0
+                text33        3946     3946      11A     834     0
+                text34        4290     4290       46     834     0
+                text36        32A8     32A8      16A     834     0
+                text35        1B1A     1B1A      3A2     834     0
+                text21        297A     297A      1AE     834     0
+                text6         3C48     3C48       DE     834     0
+                text5         3E04     3E04       D4     834     0
+                text7         431C     431C       3E     834     0
+                text9         2B28     2B28      190     834     0
+                text8         4394     4394       36     834     0
+                text4         2E48     2E48      188     834     0
+                text0         11FA     11FA      4B2     834     0
+                text1         225E     225E      35E     834     0
+                text3         41EC     41EC       5E     834     0
+                text2         2CB8     2CB8      190     834     0
+                text17        3814     3814      132     834     0
+                text16        40EE     40EE       8A     834     0
+                text18        3D26     3D26       DE     834     0
+                text20        2FD0     2FD0      16E     834     0
+                text19        3412     3412      15A     834     0
+                text15        424A     424A       46     834     0
+                text11        3A60     3A60       FA     834     0
+                text10        25BC     25BC      1E0     834     0
+                text12        43CA     43CA       32     834     0
+                text14        16AC     16AC      46E     834     0
+                text13        43FC     43FC       1E     834     0
+
+COMMON          param2         200      200       6F     200     1
+
+TOTAL           Name          Link     Load   Length  Space
+        CLASS   CODE           
+                end_init        38       38       24     0
+                intcode          8        8       10     0
+                init            18       18       20     0
+                idata         1068     1068      192     0
+                reset_vec        0        0        4     0
+                text29        42D6     42D6       46     0
+                text28        404C     404C       A2     0
+                text30        1EBC     1EBC      3A2     0
+                text32        313E     313E      16A     0
+                text31        3ED8     3ED8       BA     0
+                text27        435A     435A       3A     0
+                text23        3B5A     3B5A       EE     0
+                text22        36C0     36C0      154     0
+                text24        279C     279C      1DE     0
+                text26        356C     356C      154     0
+                text25        4178     4178       74     0
+                text37        3F92     3F92       BA     0
+                text33        3946     3946      11A     0
+                text34        4290     4290       46     0
+                text36        32A8     32A8      16A     0
+                text35        1B1A     1B1A      3A2     0
+                text21        297A     297A      1AE     0
+                text6         3C48     3C48       DE     0
+                text5         3E04     3E04       D4     0
+                text7         431C     431C       3E     0
+                text9         2B28     2B28      190     0
+                text8         4394     4394       36     0
+                text4         2E48     2E48      188     0
+                text0         11FA     11FA      4B2     0
+                text1         225E     225E      35E     0
+                text3         41EC     41EC       5E     0
+                text2         2CB8     2CB8      190     0
+                text17        3814     3814      132     0
+                text16        40EE     40EE       8A     0
+                text18        3D26     3D26       DE     0
+                text20        2FD0     2FD0      16E     0
+                text19        3412     3412      15A     0
+                text15        424A     424A       46     0
+                text11        3A60     3A60       FA     0
+                text10        25BC     25BC      1E0     0
+                text12        43CA     43CA       32     0
+                text14        16AC     16AC      46E     0
+                text13        43FC     43FC       1E     0
+
+        CLASS   CONST          
+
+        CLASS   SMALLCONST     
+                smallcons     1000     1000       68     0
+
+        CLASS   MEDIUMCONST    
+
+        CLASS   RAM            
+
+        CLASS   BIGRAM         
+
+        CLASS   COMRAM         
+
+        CLASS   ABS1           
+                abs_s1           0        0      1E9     1
+
+        CLASS   BANK0          
+
+        CLASS   BANK1          
+
+        CLASS   BANK2          
+                param2         200      200       6F     1
+
+        CLASS   BANK3          
+
+        CLASS   BANK4          
+
+        CLASS   BANK5          
+
+        CLASS   BANK6          
+
+        CLASS   BANK7          
+
+        CLASS   BANK8          
+
+        CLASS   BANK9          
+
+        CLASS   BANK10         
+
+        CLASS   BANK11         
+
+        CLASS   BANK12         
+
+        CLASS   BANK13         
+
+        CLASS   BANK14         
+
+        CLASS   BANK15         
+
+        CLASS   NVRAM          
+
+        CLASS   FARRAM         
+
+        CLASS   CONFIG         
+                config      300000   300000        E     0
+
+        CLASS   IDLOC          
+
+        CLASS   EEDATA         
+
+
+
+SEGMENTS        Name           Load    Length   Top     Selector    Space Class
+
+                reset_vec       000000  000004  000004         0       0  CODE    
+                intcode         000008  000054  00005C         4       0  CODE    
+                param2          000200  00006F  00026F       200       1  BANK2   
+                smallconst      001000  000068  001068       800       0  SMALLCON
+                idata           001068  0033B2  00441A       834       0  CODE    
+                config          300000  00000E  30000E    300000       0  CONFIG  
+
+
+UNUSED ADDRESS RANGES
+
+        BANK1            0001E9-0001FF
+        BANK10           000A00-000AFF
+        BANK11           000B00-000BFF
+        BANK12           000C00-000CFF
+        BANK13           000D00-000DFF
+        BANK14           000E00-000EFF
+        BANK15           000F00-000F7F
+        BANK2            00026F-0002FF
+        BANK3            000300-0003FF
+        BANK4            000400-0004FF
+        BANK5            000500-0005FF
+        BANK6            000600-0006FF
+        BANK7            000700-0007FF
+        BANK8            000800-0008FF
+        BANK9            000900-0009FF
+        BIGRAM           0001E9-0001FF
+                         00026F-000F7F
+        CODE             000004-000007
+                         00005C-000FFF
+                         00441A-00FFFF
+        CONST            000004-000007
+                         00005C-000FFF
+                         00441A-00FFFF
+        EEDATA           F00000-F003FF
+        IDLOC            200000-200007
+        MEDIUMCONST      00441A-00FFFF
+        NVRAM            000F00-000F7F
+        RAM              0001E9-0001FF
+                         00026F-000F7F
+        SMALLCONST       00441A-00FFFF
+
+                                  Symbol Table
+
+??_DelayMs                  param2       00021D
+??_Display                  param2       000215
+??_Navigate                 param2       00020E
+??___asftadd                param2       00025B
+??___awdiv                  param2       00021E
+??___awmod                  param2       00021E
+??___awtoft                 param2       00020D
+??___ftadd                  param2       00023A
+??___ftdiv                  param2       000234
+??___ftge                   param2       000234
+??___ftmul                  param2       000234
+??___ftneg                  param2       000214
+??___ftpack                 param2       000243
+??___ftsub                  param2       000234
+??___fttol                  param2       000217
+??___ftunpack               param2       000244
+??___wmul                   param2       000232
+??_actual                   param2       000215
+??_adc_init                 param2       00020A
+??_cal_pid_parameters       param2       00020A
+??_calc_err                 param2       000216
+??_choose_tcouple           param2       00020A
+??_currenttemp              param2       00020D
+??_dispnum                  param2       00020D
+??_getkey                   param2       00020C
+??_lcd_command              param2       00021A
+??_lcd_data                 param2       00021A
+??_lcd_init                 param2       00020A
+??_main                     param2       000200
+??_pid                      param2       00020A
+??_pid_error                param2       000213
+??_read_adc                 param2       00020C
+??_timer0_init              param2       00020A
+??_timer0_isr               param2       000248
+??_waitkey                  param2       00020C
+??i2___ftadd                param2       000261
+??i2___ftpack               param2       00026A
+??i2___ftunpack             param2       00026B
+?_DelayMs                   param2       00021B
+?_Display                   param2       000212
+?_Navigate                  param2       00020A
+?___asftadd                 param2       000256
+?___awdiv                   param2       00021A
+?___awmod                   param2       00021A
+?___awtoft                  param2       00020A
+?___ftadd                   param2       000234
+?___ftdiv                   param2       00022E
+?___ftge                    param2       00022E
+?___ftmul                   param2       00022E
+?___ftneg                   param2       000211
+?___ftpack                  param2       000240
+?___ftsub                   param2       00022E
+?___fttol                   param2       000213
+?___ftunpack                param2       000240
+?___wmul                    param2       00022E
+?_actual                    param2       000210
+?_adc_init                  param2       00020A
+?_cal_pid_parameters        param2       00020A
+?_calc_err                  param2       000213
+?_choose_tcouple            param2       00020A
+?_currenttemp               param2       00020A
+?_dispnum                   param2       00020A
+?_getkey                    param2       00020A
+?_lcd_command               param2       000219
+?_lcd_data                  param2       000219
+?_lcd_init                  param2       00020A
+?_main                      param2       000200
+?_pid                       param2       00020A
+?_pid_error                 param2       000213
+?_read_adc                  param2       00020A
+?_timer0_init               param2       00020A
+?_timer0_isr                param2       000248
+?_waitkey                   param2       00020A
+?i2___ftadd                 param2       00025B
+?i2___ftpack                param2       000267
+?i2___ftunpack              param2       000267
+DelayMs@del                 param2       00021B
+DelayMs@i                   param2       00021D
+DelayMs@j                   param2       00021F
+Display@i                   param2       000215
+Display@pos                 param2       000214
+Display@str                 param2       000212
+Navigate@cur_dig            param2       000210
+Navigate@i                  param2       000212
+Navigate@key                param2       00020A
+Navigate@max                param2       00020E
+Navigate@statevariable      param2       00020C
+_ADCON0                     (abs)        000FC2
+_ADCON0bits                 (abs)        000FC2
+_ADCON1                     (abs)        000FC1
+_ADCON2                     (abs)        000FC0
+_ADC_Count                  (abs)        000031
+_ADIF                       (abs)        007CF6
+_ADRESH                     (abs)        000FC4
+_ADRESL                     (abs)        000FC3
+_DATA                       (abs)        00001B
+_DelayMs                    text28       00404C
+_Display                    text18       003D26
+_INTCONbits                 (abs)        000FF2
+_LATA1                      (abs)        007C49
+_LATA2                      (abs)        007C4A
+_LATA3                      (abs)        007C4B
+_LATA4                      (abs)        007C4C
+_LATA5                      (abs)        007C4D
+_LATB0                      (abs)        007C50
+_LATB1                      (abs)        007C51
+_LATD1                      (abs)        007C61
+_LATD3                      (abs)        007C63
+_LATD4                      (abs)        007C64
+_LATD5                      (abs)        007C65
+_LATD6                      (abs)        007C66
+_LATD7                      (abs)        007C67
+_Navigate                   text1        00225E
+_OSCCON                     (abs)        000FD3
+_OSCTUNE                    (abs)        000F9B
+_PIDFlag                    (abs)        000049
+_RA6                        (abs)        007C06
+_RA7                        (abs)        007C07
+_RC0                        (abs)        007C10
+_RC1                        (abs)        007C11
+_RD0                        (abs)        007C18
+_T0CON                      (abs)        000FD5
+_TMR0H                      (abs)        000FD7
+_TMR0IE                     (abs)        007F95
+_TMR0IF                     (abs)        007F92
+_TMR0L                      (abs)        000FD6
+_TRISA                      (abs)        000F92
+_TRISB0                     (abs)        007C98
+_TRISB1                     (abs)        007C99
+_TRISB7                     (abs)        007C9F
+_TRISC                      (abs)        000F94
+_TRISD0                     (abs)        007CA8
+_TRISD1                     (abs)        007CA9
+_TRISD2                     (abs)        007CAA
+_TRISD3                     (abs)        007CAB
+_TRISD4                     (abs)        007CAC
+_TRISD5                     (abs)        007CAD
+_TRISD6                     (abs)        007CAE
+_TRISD7                     (abs)        007CAF
+_TRISE                      (abs)        000F96
+__Bnvbit                    nvbit        000053
+__Brbit                     rbit         000053
+__HRAM                      (abs)        000000
+__Habsbss0                  (abs)        000057
+__Hbigbss                   bigbss       00026F
+__Hbigdata                  bigdata      00026F
+__Hbss                      bss          000053
+__Hclrtext                  clrtext      0011FA
+__Hconfig                   config       30000E
+__Hconst                    const        001068
+__Hdata                     data         0011FA
+__Hdata0                    (abs)        0001E9
+__Heeprom_data              eeprom_data  F00000
+__Hend_init                 end_init     00005C
+__Hfarbss                   farbss       000000
+__Hfardata                  fardata      000000
+__Hibigdata                 ibigdata     0011FA
+__Hidata                    idata        0011FA
+__Hidloc                    idloc        200000
+__Hifardata                 ifardata     0011FA
+__Hinit                     init         000038
+__Hintcode                  intcode      000018
+__Hintcodelo                intcodelo    000018
+__Hintentry                 intentry     0011FA
+__Hintret                   intret       0011FA
+__Hintsave_regs             intsave_regs 00026F
+__Hirdata                   irdata       0011FA
+__Hmediumconst              mediumconst  001068
+__Hnvbit                    nvbit        000298
+__Hnvram                    nvram        0011FA
+__Hnvrram                   nvrram       000053
+__Hparam                    param2       00026F
+__Hparam0                   param0       0011FA
+__Hparam1                   param1       0011FA
+__Hparam10                  param10      0011FA
+__Hparam11                  param11      0011FA
+__Hparam12                  param12      0011FA
+__Hparam13                  param13      0011FA
+__Hparam14                  param14      0011FA
+__Hparam15                  param15      0011FA
+__Hparam2                   param2       00026F
+__Hparam3                   param3       0011FA
+__Hparam4                   param4       0011FA
+__Hparam5                   param5       0011FA
+__Hparam6                   param6       0011FA
+__Hparam7                   param7       0011FA
+__Hparam8                   param8       0011FA
+__Hparam9                   param9       0011FA
+__Hpowerup                  powerup      000018
+__Hramtop                   ramtop       001000
+__Hrbit                     rbit         000298
+__Hrbss                     rbss         000053
+__Hrdata                    rdata        000053
+__Hreset_vec                reset_vec    000004
+__Hrparam                   rparam       0011FA
+__Hsmallconst               smallconst   001068
+__Hstruct                   struct       000053
+__Htemp                     temp         000053
+__Htext                     text         0011FA
+__Htext0                    text0        0011FA
+__Htext1                    text1        0011FA
+__Htext10                   text10       0011FA
+__Htext11                   text11       0011FA
+__Htext12                   text12       0011FA
+__Htext13                   text13       0011FA
+__Htext14                   text14       0011FA
+__Htext15                   text15       0011FA
+__Htext16                   text16       0011FA
+__Htext17                   text17       0011FA
+__Htext18                   text18       0011FA
+__Htext19                   text19       0011FA
+__Htext2                    text2        0011FA
+__Htext20                   text20       0011FA
+__Htext21                   text21       0011FA
+__Htext22                   text22       0011FA
+__Htext23                   text23       0011FA
+__Htext24                   text24       0011FA
+__Htext25                   text25       0011FA
+__Htext26                   text26       0011FA
+__Htext27                   text27       0011FA
+__Htext28                   text28       0011FA
+__Htext29                   text29       0011FA
+__Htext3                    text3        0011FA
+__Htext30                   text30       0011FA
+__Htext31                   text31       0011FA
+__Htext32                   text32       0011FA
+__Htext33                   text33       0011FA
+__Htext34                   text34       0011FA
+__Htext35                   text35       0011FA
+__Htext36                   text36       0011FA
+__Htext37                   text37       0011FA
+__Htext38                   text38       0011FA
+__Htext4                    text4        0011FA
+__Htext5                    text5        0011FA
+__Htext6                    text6        0011FA
+__Htext7                    text7        0011FA
+__Htext8                    text8        0011FA
+__Htext9                    text9        0011FA
+__LRAM                      (abs)        000001
+__Labsbss0                  (abs)        000000
+__Lbigbss                   bigbss       00026F
+__Lbigdata                  bigdata      00026F
+__Lbss                      bss          000053
+__Lclrtext                  clrtext      0011FA
+__Lconfig                   config       300000
+__Lconst                    const        001068
+__Ldata                     (abs)        000057
+__Ldata0                    (abs)        000057
+__Leeprom_data              eeprom_data  F00000
+__Lend_init                 end_init     000038
+__Lfarbss                   farbss       000000
+__Lfardata                  fardata      000000
+__Libigdata                 ibigdata     0011FA
+__Lidata                    idata        001068
+__Lidloc                    idloc        200000
+__Lifardata                 ifardata     0011FA
+__Linit                     init         000018
+__Lintcode                  intcode      000008
+__Lintcodelo                intcodelo    000018
+__Lintentry                 intentry     0011FA
+__Lintret                   intret       0011FA
+__Lintsave_regs             intsave_regs 00026F
+__Lirdata                   irdata       0011FA
+__Lmediumconst              mediumconst  001068
+__Lnvbit                    nvbit        000298
+__Lnvram                    nvram        0011FA
+__Lnvrram                   nvrram       000053
+__Lparam                    param2       000200
+__Lparam0                   param0       0011FA
+__Lparam1                   param1       0011FA
+__Lparam10                  param10      0011FA
+__Lparam11                  param11      0011FA
+__Lparam12                  param12      0011FA
+__Lparam13                  param13      0011FA
+__Lparam14                  param14      0011FA
+__Lparam15                  param15      0011FA
+__Lparam2                   param2       000200
+__Lparam3                   param3       0011FA
+__Lparam4                   param4       0011FA
+__Lparam5                   param5       0011FA
+__Lparam6                   param6       0011FA
+__Lparam7                   param7       0011FA
+__Lparam8                   param8       0011FA
+__Lparam9                   param9       0011FA
+__Lpowerup                  powerup      000018
+__Lramtop                   ramtop       001000
+__Lrbit                     rbit         000298
+__Lrbss                     rbss         000053
+__Lrdata                    rdata        000053
+__Lreset_vec                reset_vec    000000
+__Lrparam                   rparam       0011FA
+__Lsmallconst               smallconst   001000
+__Lstruct                   struct       000053
+__Ltemp                     temp         000053
+__Ltext                     text         0011FA
+__Ltext0                    text0        0011FA
+__Ltext1                    text1        0011FA
+__Ltext10                   text10       0011FA
+__Ltext11                   text11       0011FA
+__Ltext12                   text12       0011FA
+__Ltext13                   text13       0011FA
+__Ltext14                   text14       0011FA
+__Ltext15                   text15       0011FA
+__Ltext16                   text16       0011FA
+__Ltext17                   text17       0011FA
+__Ltext18                   text18       0011FA
+__Ltext19                   text19       0011FA
+__Ltext2                    text2        0011FA
+__Ltext20                   text20       0011FA
+__Ltext21                   text21       0011FA
+__Ltext22                   text22       0011FA
+__Ltext23                   text23       0011FA
+__Ltext24                   text24       0011FA
+__Ltext25                   text25       0011FA
+__Ltext26                   text26       0011FA
+__Ltext27                   text27       0011FA
+__Ltext28                   text28       0011FA
+__Ltext29                   text29       0011FA
+__Ltext3                    text3        0011FA
+__Ltext30                   text30       0011FA
+__Ltext31                   text31       0011FA
+__Ltext32                   text32       0011FA
+__Ltext33                   text33       0011FA
+__Ltext34                   text34       0011FA
+__Ltext35                   text35       0011FA
+__Ltext36                   text36       0011FA
+__Ltext37                   text37       0011FA
+__Ltext38                   text38       0011FA
+__Ltext4                    text4        0011FA
+__Ltext5                    text5        0011FA
+__Ltext6                    text6        0011FA
+__Ltext7                    text7        0011FA
+__Ltext8                    text8        0011FA
+__Ltext9                    text9        0011FA
+__S0                        (abs)        F00000
+__S1                        (abs)        000F00
+___asftadd                  text34       004290
+___asftadd@f1p              param2       000256
+___asftadd@f2               param2       000258
+___awdiv                    text19       003412
+___awdiv@counter            param2       00021E
+___awdiv@dividend           param2       00021A
+___awdiv@divisor            param2       00021C
+___awdiv@quotient           param2       000220
+___awdiv@sign               param2       00021F
+___awmod                    text17       003814
+___awmod@counter            param2       00021F
+___awmod@dividend           param2       00021A
+___awmod@divisor            param2       00021C
+___awmod@sign               param2       00021E
+___awtoft                   text6        003C48
+___awtoft@c                 param2       00020A
+___awtoft@f1                param2       00020D
+___ftadd                    text30       001EBC
+___ftadd@cntr               param2       00023B
+___ftadd@exp1               param2       00023E
+___ftadd@exp2               param2       00023D
+___ftadd@f1                 param2       000234
+___ftadd@f2                 param2       000237
+___ftadd@sign1              param2       00023C
+___ftadd@sign2              param2       00023A
+___ftdiv                    text21       00297A
+___ftdiv@exp1               param2       000236
+___ftdiv@exp2               param2       000234
+___ftdiv@f1                 param2       00022E
+___ftdiv@f2                 param2       000231
+___ftdiv@f3                 param2       000238
+___ftdiv@sign1              param2       000235
+___ftdiv@sign2              param2       000237
+___ftge                     text23       003B5A
+___ftge@ff1                 param2       00022E
+___ftge@ff2                 param2       000231
+___ftmul                    text24       00279C
+___ftmul@cntr               param2       000236
+___ftmul@exp1               param2       000235
+___ftmul@f1                 param2       00022E
+___ftmul@f2                 param2       000231
+___ftmul@f3                 param2       000237
+___ftmul@sign1              param2       000234
+___ftneg                    text15       00424A
+___ftneg@f1                 param2       000211
+___ftpack                   text32       00313E
+___ftpack@arg               param2       000240
+___ftpack@exp               param2       000242
+___ftsub                    text29       0042D6
+___ftsub@f1                 param2       00022E
+___ftsub@f2                 param2       000231
+___fttol                    text20       002FD0
+___fttol@exp1               param2       000218
+___fttol@f1                 param2       000213
+___fttol@lval               param2       000219
+___fttol@sign1              param2       000217
+___ftunpack                 text31       003ED8
+___ftunpack@arg             param2       000240
+___ftunpack@exp             param2       000242
+___ftunpack@sign            param2       000244
+___wmul                     text25       004178
+___wmul@multiplicand        param2       000230
+___wmul@multiplier          param2       00022E
+___wmul@product             param2       000232
+__accesstop                 (abs)        000080
+__activetblptr              (abs)        000003
+__config1                   (abs)        00F0FF
+__config2                   (abs)        00FEF9
+__config3                   (abs)        007DFF
+__config4                   (abs)        00FFFE
+__config5                   (abs)        00FFFF
+__config6                   (abs)        00FFFF
+__config7                   (abs)        00BFFF
+__end_of_DelayMs            text28       0040EE
+__end_of_Display            text18       003E04
+__end_of_Navigate           text1        0025BC
+__end_of___asftadd          text34       0042D6
+__end_of___awdiv            text19       00356C
+__end_of___awmod            text17       003946
+__end_of___awtoft           text6        003D26
+__end_of___ftadd            text30       00225E
+__end_of___ftdiv            text21       002B28
+__end_of___ftge             text23       003C48
+__end_of___ftmul            text24       00297A
+__end_of___ftneg            text15       004290
+__end_of___ftpack           text32       0032A8
+__end_of___ftsub            text29       00431C
+__end_of___fttol            text20       00313E
+__end_of___ftunpack         text31       003F92
+__end_of___wmul             text25       0041EC
+__end_of_actual             text14       001B1A
+__end_of_adc_init           text8        0043CA
+__end_of_cal_pid_parameters text12       0043FC
+__end_of_calc_err           text27       004394
+__end_of_choose_tcouple     text7        00435A
+__end_of_currenttemp        text11       003B5A
+__end_of_dispnum            text5        003ED8
+__end_of_getkey             text4        002FD0
+__end_of_lcd_command        text22       003814
+__end_of_lcd_data           text26       0036C0
+__end_of_lcd_init           text9        002CB8
+__end_of_main               text0        0016AC
+__end_of_pid                text10       00279C
+__end_of_pid_error          text16       004178
+__end_of_read_adc           text3        00424A
+__end_of_timer0_init        text13       00441A
+__end_of_timer0_isr         text33       003A60
+__end_of_waitkey            text2        002E48
+__end_ofi2___ftadd          text35       001EBC
+__end_ofi2___ftpack         text36       003412
+__end_ofi2___ftunpack       text37       00404C
+__mediumconst               mediumconst  001068
+__ramtop                    ramtop       001000
+__smallconst                smallconst   001000
+_a                          (abs)        000023
+_accum                      (abs)        000006
+_accumcount                 (abs)        00004A
+_actual                     text14       0016AC
+_actual$972                 param2       000215
+_adc_init                   text8        004394
+_cal_pid_parameters         text12       0043CA
+_calc_err                   text27       00435A
+_choose_tcouple             text7        00431C
+_count                      (abs)        000044
+_cur_inc                    (abs)        00001C
+_cur_temperature            (abs)        00002E
+_currenttemp                text11       003A60
+_dispnum                    text5        003E04
+_e0                         (abs)        00002B
+_e1                         (abs)        000028
+_e2                         (abs)        00003C
+_exit                       init         000018
+_flag                       (abs)        000046
+_getkey                     text4        002E48
+_j                          (abs)        000057
+_k                          (abs)        000111
+_k1                         (abs)        00003F
+_k2                         (abs)        000036
+_k3                         (abs)        000039
+_kd                         (abs)        00004D
+_ki                         (abs)        000050
+_lcd_command                text22       0036C0
+_lcd_data                   text26       00356C
+_lcd_init                   text9        002B28
+_main                       text0        0011FA
+_main$933                   param2       000200
+_nodigit                    (abs)        000042
+_numstr                     (abs)        000009
+_outint                     (abs)        000026
+_outint_1                   (abs)        000055
+_pid                        text10       0025BC
+_pid$951                    param2       00020A
+_pid$952                    param2       00020D
+_pid$953                    param2       000210
+_pid_cycle_no               (abs)        000043
+_pid_error                  text16       0040EE
+_position                   (abs)        000048
+_read_adc                   text3        0041EC
+_samplecount                (abs)        000003
+_sampleflag                 (abs)        000053
+_set_temperature            (abs)        000000
+_states                     (abs)        0001CB
+_string1                    smallconst   001001
+_string2                    smallconst   001012
+_string3                    smallconst   001023
+_string4                    smallconst   001034
+_string5                    smallconst   001045
+_string6                    smallconst   001056
+_sw                         (abs)        000019
+_thermocouple_type          (abs)        00001E
+_timer0_init                text13       0043FC
+_timer0_isr                 text33       003946
+_u                          (abs)        000020
+_u1                         (abs)        000033
+_waitkey                    text2        002CB8
+actual@actualtmp            param2       000229
+actual@actualvtg            param2       000210
+actual@i                    param2       000218
+actual@slope                param2       00021A
+actual@t                    param2       000213
+actual@tmp1                 param2       000223
+actual@tmp2                 param2       00021D
+actual@vtg1                 param2       000226
+actual@vtg2                 param2       000220
+calc_err@error              param2       000216
+currenttemp@temp            param2       00020D
+dispnum@i                   param2       00020D
+dispnum@number              param2       00020A
+dispnum@pos                 param2       00020C
+getkey@detected             param2       00020C
+i2___ftadd                  text35       001B1A
+i2___ftadd@cntr             param2       000262
+i2___ftadd@exp1             param2       000265
+i2___ftadd@exp2             param2       000264
+i2___ftadd@f1               param2       00025B
+i2___ftadd@f2               param2       00025E
+i2___ftadd@sign1            param2       000263
+i2___ftadd@sign2            param2       000261
+i2___ftpack                 text36       0032A8
+i2___ftpack@arg             param2       000267
+i2___ftpack@exp             param2       000269
+i2___ftunpack               text37       003F92
+i2___ftunpack@arg           param2       000267
+i2___ftunpack@exp           param2       000269
+i2___ftunpack@sign          param2       00026B
+int_func                    intcode      000008
+intlevel0                   text         00441A
+intlevel1                   text         00441A
+intlevel2                   text         00441A
+intlevel3                   text         00441A
+lcd_command@cmd             param2       000219
+lcd_data@data               param2       000219
+main@i                      param2       000206
+main@ret                    param2       000204
+start                       init         000018
+waitkey@detected            param2       00020C

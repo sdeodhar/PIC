@@ -1,0 +1,583 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4620 ]
+[s S21 lookuptable 6 `f 1 tmp 3 0 `f 1 vtg 3 3 ]
+"203 main.c
+[s S63 . 6 `uc 1 enter_state 1 0 `uc 1 escape_state 1 1 `i 1 statemax_val 2 2 `i 1 statemin_val 2 4 ]
+"63 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\include\pic18f4620.h
+[s S120 . 1 `Vuc 1 RBIF 1 0 :1:0 
+`Vuc 1 INT0IF 1 0 :1:1 
+`Vuc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S129 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S133 . 1 `S120 1 . 1 0 `S129 1 . 1 0 ]
+"481
+[s S141 . 1 `uc 1 ADON 1 0 :1:0 
+`Vuc 1 GODONE 1 0 :1:1 
+`Vuc 1 CHS 1 0 :4:2 
+]
+[u S145 . 1 `S141 1 . 1 0 ]
+"171 main.c
+[v F1733 `(v  1 t 0 ]
+"5 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\asftadd.c
+[v ___asftadd `(f  1 e 3 0 ]
+"5 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\awdiv.c
+[v ___awdiv `(i  1 e 2 0 ]
+"5 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\awmod.c
+[v ___awmod `(i  1 e 2 0 ]
+"16 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\awtoft.c
+[v ___awtoft `(f  1 e 3 0 ]
+"13 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\float.c
+[v ___ftunpack `(uc  1 e 1 0 ]
+"33
+[v ___ftpack `(v  1 e 0 0 ]
+"17 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\ftadd.c
+[v ___ftadd `(f  1 e 3 0 ]
+"19 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\ftdiv.c
+[v ___ftdiv `(f  1 e 3 0 ]
+"5 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\ftge.c
+[v ___ftge `(b  1 e 0 0 ]
+"18 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\ftmul.c
+[v ___ftmul `(f  1 e 3 0 ]
+"16 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\ftneg.c
+[v ___ftneg `(f  1 e 3 0 ]
+"17 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\ftsub.c
+[v ___ftsub `(f  1 e 3 0 ]
+"16 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\fttol.c
+[v ___fttol `(l  1 e 4 0 ]
+"3 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\wmul.c
+[v ___wmul `(ui  1 e 2 0 ]
+"217 main.c
+[v _main `(v  1 e 0 0 ]
+"364
+[v _waitkey `(i  1 e 2 0 ]
+"408
+[v _getkey `(i  1 e 2 0 ]
+"452
+[v _Navigate `(i  1 e 2 0 ]
+"517
+[v _lcd_command `(v  1 e 0 0 ]
+"539
+[v _lcd_data `(v  1 e 0 0 ]
+"562
+[v _Display `(i  1 e 2 0 ]
+"578
+[v _lcd_init `(v  1 e 0 0 ]
+"603
+[v _DelayMs `(v  1 e 0 0 ]
+"610
+[v _dispnum `(i  1 e 2 0 ]
+"626
+[v _timer0_init `(v  1 e 0 0 ]
+"637
+[v _adc_init `(v  1 e 0 0 ]
+"651
+[v _read_adc `(i  1 e 2 0 ]
+"699
+[v _timer0_isr `I(v  1 e 0 0 ]
+"744
+[v _actual `(f  1 e 3 0 ]
+"773
+[v _currenttemp `(f  1 e 3 0 ]
+"808
+[v _calc_err `(f  1 e 3 0 ]
+"823
+[v _cal_pid_parameters `(v  1 e 0 0 ]
+"832
+[v _pid `(v  1 e 0 0 ]
+"860
+[v _pid_error `(v  1 e 0 0 ]
+"883
+[v _choose_tcouple `(v  1 e 0 0 ]
+"47 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\include\18f4620.h
+[v _INTCONbits `S133  1 e 1 @4082 ]
+"204
+[v _ADCON0bits `VS145  1 e 1 @4034 ]
+"62 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\include\pic18f4620.h
+[v _TMR0H `VNuc  1 e 1 @4055 ]
+"63
+[v _TMR0L `VNuc  1 e 1 @4054 ]
+"66
+[v _T0CON `Nuc  1 e 1 @4053 ]
+"67
+[v _OSCCON `VNuc  1 e 1 @4051 ]
+"85
+[v _ADRESH `VNuc  1 e 1 @4036 ]
+"86
+[v _ADRESL `VNuc  1 e 1 @4035 ]
+"89
+[v _ADCON0 `VNuc  1 e 1 @4034 ]
+"90
+[v _ADCON1 `Nuc  1 e 1 @4033 ]
+"91
+[v _ADCON2 `Nuc  1 e 1 @4032 ]
+"131
+[v _OSCTUNE `Nuc  1 e 1 @3995 ]
+"133
+[v _TRISE `VNuc  1 e 1 @3990 ]
+"136
+[v _TRISC `VNuc  1 e 1 @3988 ]
+"138
+[v _TRISA `VNuc  1 e 1 @3986 ]
+"162
+[v _TMR0IF `VNb  1 e 0 @32658 ]
+"165
+[v _TMR0IE `Nb  1 e 0 @32661 ]
+"481
+[v _ADIF `VNb  1 e 0 @31990 ]
+"518
+[v _TRISD0 `VNb  1 e 0 @31912 ]
+"519
+[v _TRISD1 `VNb  1 e 0 @31913 ]
+"520
+[v _TRISD2 `VNb  1 e 0 @31914 ]
+"521
+[v _TRISD3 `VNb  1 e 0 @31915 ]
+"522
+[v _TRISD4 `VNb  1 e 0 @31916 ]
+"523
+[v _TRISD5 `VNb  1 e 0 @31917 ]
+"524
+[v _TRISD6 `VNb  1 e 0 @31918 ]
+"525
+[v _TRISD7 `VNb  1 e 0 @31919 ]
+"539
+[v _TRISB0 `VNb  1 e 0 @31896 ]
+"540
+[v _TRISB1 `VNb  1 e 0 @31897 ]
+"546
+[v _TRISB7 `VNb  1 e 0 @31903 ]
+"567
+[v _LATD1 `VNb  1 e 0 @31841 ]
+"569
+[v _LATD3 `VNb  1 e 0 @31843 ]
+"570
+[v _LATD4 `VNb  1 e 0 @31844 ]
+"571
+[v _LATD5 `VNb  1 e 0 @31845 ]
+"572
+[v _LATD6 `VNb  1 e 0 @31846 ]
+"573
+[v _LATD7 `VNb  1 e 0 @31847 ]
+"587
+[v _LATB0 `VNb  1 e 0 @31824 ]
+"588
+[v _LATB1 `VNb  1 e 0 @31825 ]
+"598
+[v _LATA1 `VNb  1 e 0 @31817 ]
+"599
+[v _LATA2 `VNb  1 e 0 @31818 ]
+"600
+[v _LATA3 `VNb  1 e 0 @31819 ]
+"601
+[v _LATA4 `VNb  1 e 0 @31820 ]
+"602
+[v _LATA5 `VNb  1 e 0 @31821 ]
+"616
+[v _RD0 `VNb  1 e 0 @31768 ]
+"627
+[v _RC0 `VNb  1 e 0 @31760 ]
+"628
+[v _RC1 `VNb  1 e 0 @31761 ]
+"653
+[v _RA6 `VNb  1 e 0 @31750 ]
+"654
+[v _RA7 `VNb  1 e 0 @31751 ]
+"92 main.c
+[v _k `[31]S21  1 e 186 @273 ]
+"126
+[v _j `[31]S21  1 e 186 @87 ]
+"180
+[v _numstr `[16]uc  1 e 16 @9 ]
+"183
+[v _flag `i  1 e 2 @70 ]
+[v _ADC_Count `i  1 e 2 @49 ]
+[v _count `i  1 e 2 @68 ]
+"185
+[v _a `f  1 e 3 @35 ]
+"188
+[v _e2 `f  1 e 3 @60 ]
+[v _u `f  1 e 3 @32 ]
+[v _e0 `f  1 e 3 @43 ]
+[v _e1 `f  1 e 3 @40 ]
+[v _u1 `f  1 e 3 @51 ]
+"189
+[v _kd `f  1 e 3 @77 ]
+[v _k1 `f  1 e 3 @63 ]
+[v _ki `f  1 e 3 @80 ]
+[v _k3 `f  1 e 3 @57 ]
+[v _k2 `f  1 e 3 @54 ]
+"190
+[v _pid_cycle_no `uc  1 e 1 @67 ]
+"191
+[v _outint `i  1 e 2 @38 ]
+[v _cur_inc `i  1 e 2 @28 ]
+[v _sampleflag `i  1 e 2 @83 ]
+[v _outint_1 `i  1 e 2 @85 ]
+"192
+[v _accum `f  1 e 3 @6 ]
+[v _samplecount `f  1 e 3 @3 ]
+[v _accumcount `f  1 e 3 @74 ]
+"193
+[v _nodigit `uc  1 e 1 @66 ]
+"194
+[v _PIDFlag `uc  1 e 1 @73 ]
+[v _DATA `uc  1 e 1 @27 ]
+[v _position `uc  1 e 1 @72 ]
+"195
+[v _thermocouple_type `ui  1 e 2 @30 ]
+[v _sw `ui  1 e 2 @25 ]
+"196
+[v _cur_temperature `f  1 e 3 @46 ]
+[v _set_temperature `f  1 e 3 @0 ]
+"198
+[v _string2 `DC[17]uc  1 e 17 0 ]
+"199
+[v _string1 `DC[17]uc  1 e 17 0 ]
+"200
+[v _string3 `DC[17]uc  1 e 17 0 ]
+"201
+[v _string4 `DC[17]uc  1 e 17 0 ]
+"202
+[v _string5 `DC[17]uc  1 e 17 0 ]
+"203
+[v _string6 `DC[17]uc  1 e 17 0 ]
+"214
+[v _states `[5]S63  1 e 30 @459 ]
+"313
+"837
+"764
+"217
+[v _main `(v  1 e 0 0 ]
+{
+"219
+[v _ret `i  1 a 2 4 ]
+[v _i `i  1 a 2 6 ]
+"361
+} 8
+"452
+[v _Navigate `(i  1 e 2 0 ]
+{
+"453
+[v _max `i  1 a 2 0 ]
+[v _cur_dig `i  1 a 2 2 ]
+[v _i `i  1 a 2 4 ]
+"452
+[v _key `i  1 p 2 0 ]
+[v _statevariable `i  1 p 2 2 ]
+"513
+} 6
+"364
+[v _waitkey `(i  1 e 2 0 ]
+{
+"365
+[v _detected `i  1 a 2 0 ]
+"406
+} 2
+"651
+[v _read_adc `(i  1 e 2 0 ]
+{
+"670
+} 0
+"408
+[v _getkey `(i  1 e 2 0 ]
+{
+"409
+[v _detected `i  1 a 2 0 ]
+"449
+} 2
+"610
+[v _dispnum `(i  1 e 2 0 ]
+{
+"611
+[v _i `i  1 a 2 0 ]
+"610
+[v _number `i  1 p 2 0 ]
+[v _pos `uc  1 p 1 2 ]
+"623
+} 2
+"16 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\awtoft.c
+[v ___awtoft `(f  1 e 3 0 ]
+{
+"17
+[v _f1 `f  1 a 3 0 ]
+"16
+[v _c `i  1 p 2 0 ]
+"28
+} 3
+"883 main.c
+[v _choose_tcouple `(v  1 e 0 0 ]
+{
+"905
+} 0
+"637
+[v _adc_init `(v  1 e 0 0 ]
+{
+"648
+} 0
+"578
+[v _lcd_init `(v  1 e 0 0 ]
+{
+"600
+} 0
+"832
+[v _pid `(v  1 e 0 0 ]
+{
+"857
+} 9
+"773
+[v _currenttemp `(f  1 e 3 0 ]
+{
+"774
+[v _temp `f  1 a 3 0 ]
+"805
+} 3
+"823
+[v _cal_pid_parameters `(v  1 e 0 0 ]
+{
+"829
+} 0
+"626
+[v _timer0_init `(v  1 e 0 0 ]
+{
+"634
+} 0
+"744
+[v _actual `(f  1 e 3 0 ]
+{
+"746
+[v _i `i  1 a 2 3 ]
+"745
+[v _slope `f  1 a 3 5 ]
+[v _tmp2 `f  1 a 3 8 ]
+[v _vtg2 `f  1 a 3 11 ]
+[v _tmp1 `f  1 a 3 14 ]
+[v _vtg1 `f  1 a 3 17 ]
+"744
+[v _actualtmp `f  1 a 3 20 ]
+[v _actualvtg `f  1 p 3 0 ]
+[v _t `*.bS21  1 p 2 3 ]
+"770
+} 23
+"16 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\ftneg.c
+[v ___ftneg `(f  1 e 3 0 ]
+{
+[v _f1 `f  1 p 3 0 ]
+"20
+} 0
+"860 main.c
+[v _pid_error `(v  1 e 0 0 ]
+{
+"880
+} 0
+"5 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\awmod.c
+[v ___awmod `(i  1 e 2 0 ]
+{
+"6
+[v _sign `uc  1 a 1 0 ]
+[v _counter `uc  1 a 1 1 ]
+"5
+[v _dividend `i  1 p 2 0 ]
+[v _divisor `i  1 p 2 2 ]
+"30
+} 2
+"562 main.c
+[v _Display `(i  1 e 2 0 ]
+{
+"563
+[v _i `i  1 a 2 0 ]
+"562
+[v _str `*.sDCuc  1 p 2 0 ]
+[v _pos `uc  1 p 1 2 ]
+"575
+} 2
+"5 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\awdiv.c
+[v ___awdiv `(i  1 e 2 0 ]
+{
+"7
+[v _counter `uc  1 a 1 0 ]
+[v _sign `uc  1 a 1 1 ]
+"6
+[v _quotient `i  1 a 2 2 ]
+"5
+[v _dividend `i  1 p 2 0 ]
+[v _divisor `i  1 p 2 2 ]
+"37
+} 4
+"16 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\fttol.c
+[v ___fttol `(l  1 e 4 0 ]
+{
+"17
+[v _sign1 `uc  1 a 1 0 ]
+[v _exp1 `uc  1 a 1 1 ]
+"18
+[v _lval `ul  1 a 4 2 ]
+"16
+[v _f1 `f  1 p 3 0 ]
+"40
+} 6
+"19 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\ftdiv.c
+[v ___ftdiv `(f  1 e 3 0 ]
+{
+"20
+[v _exp2 `uc  1 a 1 0 ]
+[v _sign1 `uc  1 a 1 1 ]
+[v _exp1 `uc  1 a 1 2 ]
+[v _sign2 `uc  1 a 1 3 ]
+"21
+[v _f3 `f  1 a 3 4 ]
+"19
+[v _f1 `f  1 p 3 0 ]
+[v _f2 `f  1 p 3 3 ]
+"45
+} 7
+"517 main.c
+[v _lcd_command `(v  1 e 0 0 ]
+{
+[v _cmd `uc  1 p 1 0 ]
+"536
+} 0
+"5 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\ftge.c
+[v ___ftge `(b  1 e 0 0 ]
+{
+[v _ff1 `f  1 p 3 0 ]
+[v _ff2 `f  1 p 3 3 ]
+"13
+} 0
+"18 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\ftmul.c
+[v ___ftmul `(f  1 e 3 0 ]
+{
+"19
+[v _sign1 `uc  1 a 1 0 ]
+[v _exp1 `uc  1 a 1 1 ]
+[v _cntr `uc  1 a 1 2 ]
+"20
+[v _f3 `f  1 a 3 3 ]
+"18
+[v _f1 `f  1 p 3 0 ]
+[v _f2 `f  1 p 3 3 ]
+"46
+} 6
+"3 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\wmul.c
+[v ___wmul `(ui  1 e 2 0 ]
+{
+"4
+[v _product `ui  1 a 2 0 ]
+"3
+[v _multiplier `ui  1 p 2 0 ]
+[v _multiplicand `ui  1 p 2 2 ]
+"13
+} 2
+"539 main.c
+[v _lcd_data `(v  1 e 0 0 ]
+{
+[v _data `uc  1 p 1 0 ]
+"558
+} 0
+"808
+[v _calc_err `(f  1 e 3 0 ]
+{
+"809
+[v _error `f  1 a 3 0 ]
+"820
+} 3
+"603
+[v _DelayMs `(v  1 e 0 0 ]
+{
+"604
+[v _i `i  1 a 2 0 ]
+[v _j `i  1 a 2 2 ]
+"603
+[v _del `i  1 p 2 0 ]
+"607
+} 4
+"17 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\ftsub.c
+[v ___ftsub `(f  1 e 3 0 ]
+{
+[v _f1 `f  1 p 3 0 ]
+[v _f2 `f  1 p 3 3 ]
+"20
+} 0
+"17 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\ftadd.c
+[v ___ftadd `(f  1 e 3 0 ]
+{
+"18
+[v _sign2 `uc  1 a 1 0 ]
+[v _cntr `uc  1 a 1 1 ]
+[v _sign1 `uc  1 a 1 2 ]
+[v _exp2 `uc  1 a 1 3 ]
+[v _exp1 `uc  1 a 1 4 ]
+"17
+[v _f1 `f  1 p 3 0 ]
+[v _f2 `f  1 p 3 3 ]
+"83
+} 5
+"13 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\float.c
+[v ___ftunpack `(uc  1 e 1 0 ]
+{
+"14
+[v _sign `uc  1 a 1 0 ]
+"13
+[v _arg `*.bum  1 p 2 0 ]
+[v _exp `*.buc  1 p 2 2 ]
+"27
+} 1
+"33
+[v ___ftpack `(v  1 e 0 0 ]
+{
+[v _arg `*.bum  1 p 2 0 ]
+[v _exp `uc  1 p 1 2 ]
+"55
+} 0
+"699 main.c
+[v _timer0_isr `I(v  1 e 0 0 ]
+{
+"737
+} 0
+"5 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\asftadd.c
+[v ___asftadd `(f  1 e 3 0 ]
+{
+[v _f1p `*.af  1 p 2 0 ]
+[v _f2 `f  1 p 3 2 ]
+"7
+} 0
+"17 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\ftadd.c
+[v ___ftadd `(f  1 e 3 0 ]
+{
+"18
+[v _sign2 `uc  1 a 1 0 ]
+[v _cntr `uc  1 a 1 1 ]
+[v _sign1 `uc  1 a 1 2 ]
+[v _exp2 `uc  1 a 1 3 ]
+[v _exp1 `uc  1 a 1 4 ]
+"17
+[v _f1 `f  1 p 3 0 ]
+[v _f2 `f  1 p 3 3 ]
+"83
+} 5
+"33 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.65\sources\float.c
+[v ___ftpack `(v  1 e 0 0 ]
+{
+[v _arg `*.bum  1 p 2 0 ]
+[v _exp `uc  1 p 1 2 ]
+"55
+} 0
+"13
+[v ___ftunpack `(uc  1 e 1 0 ]
+{
+"14
+[v _sign `uc  1 a 1 0 ]
+"13
+[v _arg `*.bum  1 p 2 0 ]
+[v _exp `*.buc  1 p 2 2 ]
+"27
+} 1
