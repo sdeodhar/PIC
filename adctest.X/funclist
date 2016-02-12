@@ -1,0 +1,14 @@
+_spi: CODE, 1199 0 13
+_main: CODE, 123 0 404
+_adcinit: CODE, 996 0 76
+_i2cddata: CODE, 4 0 116
+_USARTWriteInt: CODE, 527 0 170
+___lldiv: CODE, 814 0 99
+_I2Cinit: CODE, 1126 0 31
+_SPIinit: CODE, 1212 0 11
+_USARTWriteChar: CODE, 1223 0 11
+_Delay: CODE, 697 0 117
+___llmod: CODE, 913 0 83
+_sendSPIdata: CODE, 1072 0 54
+_USARTinit: CODE, 1180 0 19
+Total: 1204
